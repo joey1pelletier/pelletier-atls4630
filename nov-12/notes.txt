@@ -1,0 +1,72 @@
+always import .jsx functions you make into the main app
+
+updating objects and arrays in state
+    trickier to do this
+    the state has to reference a new piece of memory
+    objects/arrays need to be recreated through functions like Array.map() functions
+        or by using the spread operator
+    ex: ArrayAsState.jsx, 
+        exports a default function of ArrayAsState, to be imported to titleBar
+        first import the useState from react
+        declare empty array: const [ myList, setMyList ] = useState(['1']); i.e. 1 empty string
+        return a div with MyList.map((item,index) => <li key={index}>{item}</li>)
+
+        NORMAL JS: can do myList.push(newItem); ... will update in console but the view won't change. Will just point to same memory
+        REACT: setMyList(myList.slice()) or setMyList(Array.from(myList)) or THE INDUSTRY STANDARD WAY: setMyList([ ...myList, newItem ]) 
+            For the industry standard way, it creates a new array that includes all elements of current myList and then it adds the new item as the last element in the array
+        
+Using a reducer to extract state logic
+    instead of useState hook, you can use useReducer hook
+    create a reducer function before using it
+    function myListReducer(myList, event) {
+        switch (event.type) {
+            case 'add':
+                const newItem = (Math.random()*100).toString()
+                return [ ...myList, newItem ]
+                
+            case 'remove':
+            const itemToRemove = event.item;
+                return myList.filter(item => item !== itemToRemove)
+                
+            case 'update':
+                return myList.map((item, index) => {
+                    if (index === event.index) {
+                        return event.value
+                    }
+                    else {
+                        return item
+                    }
+                })
+                
+        }
+    }
+
+    then, in the .jsx file you're working with, do
+        const [ myList, myListDispatch ] = userReducer(myListReducer)
+
+        function addItemToMyList() {
+            myListDispatch({ type: 'add' })
+        }
+
+    can have a button that does myListDispatch()
+    <button
+        onclick={() => myListDispatch({
+             type: 'remove',
+        item: item,
+        }
+
+        )}
+
+Using context to manage shared data
+    create searchNewContent.js or .jsx
+    import the createContext function from react
+    export const SearchTextContext = createContext(null); // its null b/c we just need to check if its reading the state
+    in the .jsx file you want to use this function, do
+        const searchTextContext = useContext(SearchTextContent)
+    In the other jsx (in this case filterableProductsList.jsx),
+        do <SearchTextContext.Provider value={{searchText}}>
+        ...do the rest later i dunno whats going on
+
+
+
+       

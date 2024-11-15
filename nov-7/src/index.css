@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: aqua;
+}
+
+.lists-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.product-list {
+  background-color: antiquewhite;
+  border-radius: 16px;
+  border-style: solid;
+  border-width: 0;
+  padding-block: 16px;
+  padding-inLine: 8px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+
+}
+
+.product-item {
+  background-color: lightgoldenrodyellow;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 0;
+  padding-inline: 4px;
+  height: 24px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
