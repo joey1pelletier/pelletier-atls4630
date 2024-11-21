@@ -17,10 +17,10 @@ async function addFoodPic() {
     const json = await response.json();
 
     console.log(json);
-    let food_link = json.image;
-    console.log(food_link);
-
-       
+    //let food_link = json.image;
+    //console.log(food_link);
+}
+    /*   
     let food_img = document.createElement('img');
     console.log(food_img);
     food_img.setAttribute('src', food_link);
@@ -30,8 +30,9 @@ async function addFoodPic() {
     document.body.appendChild(food_img);
     console.log(food_img);
     console.log(document.body);
+    */
     
-}
+
 
 
 
