@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react'
 
+
+// improper usage of ref.
 export default function RefVsState(){
     const refCounter = useRef(0);
   const [ stateCounter, setStateCounter ] = useState(0);

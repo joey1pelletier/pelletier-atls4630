@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  background-color: rgb(63, 61, 61);
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Courier Prime";
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+}
+
+textarea {
+  color: white;
+  background-color: black;
+  font-family: "Courier Prime";
+  width: 50vw;
+  height: 10vh;
+  font-size: 2em;
+  border: 2px solid #FFFFFF;
+  outline: none;
+}
+
+button {
+  margin: 2em;
+  padding: 1em;
+  color: white;
+  background-color: rgb(63, 61, 61);
+  font-family: "Courier Prime";
+  border: 2px solid #FFFFFF;
+  outline: none;
+  font-size: 1em;
+}
+
+.fear-box {
+  height: 10vh;
+  width: 20vw;
+  color: black;
+  background-color: turquoise;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  border: 3px solid black;
+  border-radius: 15px;
+  font-size: 2em;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.notes-list {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  padding-top: 3em;
+  font-size: 2em;
+}
