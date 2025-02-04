@@ -22,8 +22,8 @@ export default function App() {
     if(curr_vals.length == 0) {
       return (
         <>
-        <h2>Fear Tree</h2>
-        <p>No fears to display</p>
+        <h2>Fear Placeholder</h2>
+        <p>No steps to display</p>
         </>
       )
     }
@@ -60,7 +60,7 @@ export default function App() {
     <>
       <div className="App">
         <h1>Limit Break</h1>
-        <p>Enter your fear below</p>
+        <p>Enter steps that will prepare you for facing the fear.</p>
         <textarea
           onChange={change} 
           value={val} 
@@ -71,7 +71,6 @@ export default function App() {
         {
           displayNotes()
         }
-        
         </div>
       </div>
       

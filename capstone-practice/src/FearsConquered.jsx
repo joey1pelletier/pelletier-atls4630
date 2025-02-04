@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-export default function TrackJourneyButton() {
+export default function FearsConquered() {
 
-    const [buttonText, setButtonText] = useState('track your journey');
+    const [buttonText, setButtonText] = useState('FEARS CONQUERED');
 
     const buttonClick = () => {
-        setButtonText('Track Your Journey Button clicked');
+        setButtonText('Fears Conquered Button clicked');
     };
 
     

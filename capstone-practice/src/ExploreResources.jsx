@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-export default function BreakLimitButton() {
+export default function ExploreResources() {
 
-    const [buttonText, setButtonText] = useState('break your limits');
+    const [buttonText, setButtonText] = useState('EXPLORE RESOURCES');
 
     const buttonClick = () => {
-        setButtonText('Break Limit Button clicked');
+        setButtonText('Explore Resources Button clicked');
     };
 
     

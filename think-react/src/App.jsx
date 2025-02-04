@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
+
 import SepButton from './SepButton';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
       </li>
     );
 
+    
   return (
     <>
       <ul>{listItems}</ul>
