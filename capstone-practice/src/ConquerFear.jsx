@@ -5,7 +5,7 @@ export default function ConquerFear() {
     const [buttonText, setButtonText] = useState('CONQUER YOUR FEARS');
 
     const buttonClick = () => {
-        setButtonText('Break Limit Button clicked');
+        setButtonText('Conquer Fear Button clicked');
     };
 
     
